@@ -28,24 +28,80 @@
       flex-direction: column;
       text-align: center;
       min-height: 100vh;
-      padding: 40px 20px;
+      padding: 60px 20px 40px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 1rem;
-      letter-spacing: 1px;
     }
 
-    p {
+    p.tagline {
       font-size: 1.2rem;
       margin-bottom: 2rem;
       max-width: 600px;
     }
 
+    .form-container {
+      max-width: 400px;
+      width: 100%;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+
+    .form-container h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .form-container p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: var(--charcoal);
+    }
+
+    form.ml-block-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    form.ml-block-form input[type="email"] {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    form.ml-block-form button.primary {
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form.ml-block-form button.primary:hover {
+      background-color: #536e6d;
+    }
+
+    .ml-form-successContent {
+      text-align: center;
+    }
+
     .socials {
-      margin-top: 2.5rem;
+      margin-top: 20px;
     }
 
     .socials a {
@@ -55,81 +111,37 @@
       font-size: 0.95rem;
     }
 
-    /* Optional: tighten MailerLite styling slightly */
-    .ml-form-embedContainer h4 {
-      font-family: 'Playfair Display', serif !important;
-      font-size: 1.8rem !important;
-      color: var(--charcoal) !important;
-    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
 
-    .ml-form-embedContainer p {
-      font-family: 'Inter', sans-serif !important;
-      font-size: 1rem !important;
-      color: var(--charcoal) !important;
-    }
-
-    .ml-form-embedSubmit button {
-      background-color: var(--accent) !important;
-      border-radius: 6px !important;
-      font-family: 'Inter', sans-serif !important;
+      .form-container {
+        padding: 20px;
+      }
     }
   </style>
-  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1746091");</style>
 </head>
 <body>
   <h1>Unfiltered Mind</h1>
-  <p>It's not therapy. But it might get you there.</p>
+  <p class="tagline">It's not therapy. But it might get you there.</p>
 
-  <!-- Begin MailerLite Embed -->
-  <div id="mlb2-25547384" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-25547384">
-    <div class="ml-form-align-center">
-      <div class="ml-form-embedWrapper embedForm">
-        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-          <div class="ml-form-embedContent">
-            <h4>Join the Waitlist</h4>
-            <p>Be the first to know when Unfiltered Mind launches.</p>
-          </div>
-          <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1496256/forms/153419814196479140/subscribe" method="post" target="_blank">
-            <div class="ml-form-formContent">
-              <div class="ml-form-fieldRow ml-last-item">
-                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                  <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email">
-                </div>
-              </div>
-            </div>
-            <input type="hidden" name="ml-submit" value="1">
-            <div class="ml-form-embedSubmit">
-              <button type="submit" class="primary">Join the Waitlist</button>
-              <button disabled="disabled" style="display: none;" type="button" class="loading">
-                <div class="ml-form-embedSubmitLoad"></div>
-                <span class="sr-only">Loading...</span>
-              </button>
-            </div>
-            <input type="hidden" name="anticsrf" value="true">
-          </form>
-        </div>
-        <div class="ml-form-successBody row-success" style="display: none">
-          <div class="ml-form-successContent">
-            <h4>Thank you!</h4>
-            <p>You have successfully joined our subscriber list.</p>
-          </div>
-        </div>
-      </div>
+  <!-- Begin MailerLite Form -->
+  <div class="form-container">
+    <h4>Join the Waitlist</h4>
+    <p>Be the first to know when Unfiltered Mind launches.</p>
+    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1496256/forms/153419814196479140/subscribe" method="post" target="_blank">
+      <input type="email" name="fields[email]" placeholder="Email" required autocomplete="email" />
+      <input type="hidden" name="ml-submit" value="1" />
+      <input type="hidden" name="anticsrf" value="true" />
+      <button type="submit" class="primary">Join the Waitlist</button>
+    </form>
+    <div class="ml-form-successContent" style="display:none;">
+      <h4>Thank you!</h4>
+      <p>You have successfully joined our subscriber list.</p>
     </div>
   </div>
-  <!-- End MailerLite Embed -->
-
-  <script>
-    function ml_webform_success_25547384() {
-      var $ = ml_jQuery || jQuery;
-      $('.ml-subscribe-form-25547384 .row-success').show();
-      $('.ml-subscribe-form-25547384 .row-form').hide();
-    }
-  </script>
-  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-  <script>
-    fetch("https://assets.mailerlite.com/jsonp/1496256/forms/153419814196479140/takel");
-  </script>
+  <!-- End MailerLite Form -->
 
   <div class="socials">
     <a href="https://instagram.com/unfilteredmindseries" target="_blank">Instagram</a>
