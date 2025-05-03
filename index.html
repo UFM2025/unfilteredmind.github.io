@@ -27,8 +27,8 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
-      height: 100vh;
-      padding: 0 20px;
+      min-height: 100vh;
+      padding: 40px 20px;
     }
 
     h1 {
@@ -44,21 +44,6 @@
       max-width: 600px;
     }
 
-    a.button {
-      text-decoration: none;
-      background-color: var(--accent);
-      color: #fff;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: 500;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-
-    a.button:hover {
-      background-color: #536e6d;
-    }
-
     .socials {
       margin-top: 2.5rem;
     }
@@ -70,11 +55,61 @@
       font-size: 0.95rem;
     }
   </style>
+  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1746091");</style>
 </head>
 <body>
   <h1>Unfiltered Mind</h1>
   <p>It's not therapy. But it might get you there.</p>
-  <a class="button" href="mailto:hello@unfilteredmind.co.uk">Email Us</a>
+
+  <!-- Begin MailerLite Embed -->
+  <div id="mlb2-25547384" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-25547384">
+    <div class="ml-form-align-center">
+      <div class="ml-form-embedWrapper embedForm">
+        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+          <div class="ml-form-embedContent">
+            <h4>Join the Waitlist</h4>
+            <p>Be the first to know when Unfiltered Mind launches.</p>
+          </div>
+          <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1496256/forms/153419814196479140/subscribe" method="post" target="_blank">
+            <div class="ml-form-formContent">
+              <div class="ml-form-fieldRow ml-last-item">
+                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                  <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email">
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="ml-submit" value="1">
+            <div class="ml-form-embedSubmit">
+              <button type="submit" class="primary">Join the Waitlist</button>
+              <button disabled="disabled" style="display: none;" type="button" class="loading">
+                <div class="ml-form-embedSubmitLoad"></div>
+                <span class="sr-only">Loading...</span>
+              </button>
+            </div>
+            <input type="hidden" name="anticsrf" value="true">
+          </form>
+        </div>
+        <div class="ml-form-successBody row-success" style="display: none">
+          <div class="ml-form-successContent">
+            <h4>Thank you!</h4>
+            <p>You have successfully joined our subscriber list.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function ml_webform_success_25547384() {
+      var $ = ml_jQuery || jQuery;
+      $('.ml-subscribe-form-25547384 .row-success').show();
+      $('.ml-subscribe-form-25547384 .row-form').hide();
+    }
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+  <script>
+    fetch("https://assets.mailerlite.com/jsonp/1496256/forms/153419814196479140/takel")
+  </script>
+  <!-- End MailerLite Embed -->
 
   <div class="socials">
     <a href="https://instagram.com/unfilteredmindseries" target="_blank">Instagram</a>
